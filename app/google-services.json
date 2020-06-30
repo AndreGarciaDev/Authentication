@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "594192443355",
+    "firebase_url": "https://autentic-362e3.firebaseio.com",
+    "project_id": "autentic-362e3",
+    "storage_bucket": "autentic-362e3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594192443355:android:500d5f83c7ce98c5d669fe",
+        "android_client_info": {
+          "package_name": "com.example.authentication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "594192443355-m2k2unjtlt3enc49t3dem2ogdvnp2bo3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.authentication",
+            "certificate_hash": "deebe5fbb4a2df79f6473cae0ae08dd8075ea757"
+          }
+        },
+        {
+          "client_id": "594192443355-vfrh7cn4u3r56jfocuibr0kt8m8lleca.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9jtTZC0MyhkfLK5_H9iX7UWGgG_EJ8dQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "594192443355-vfrh7cn4u3r56jfocuibr0kt8m8lleca.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
