@@ -1,7 +1,7 @@
 # Authentication
 Aplicativo SearchByVoacap
 
-Como parte de um projeto para uma das atividades do curso de pós-graduação WEB MOBILE EMBARCADOS, na disciplina de Desenvolvimento Mobile com Android - no IFPR 2020.
+Como parte de um projeto para uma das atividades do curso de pós-graduação em DESENVOLVIMENTO WEB MOBILE EMBARCADOS, na disciplina de Desenvolvimento Mobile com Android - no IFPR 2020.
 
 Este app tem o intuito de fornecer informações sobre a propagação das ondas eletromagnéticas, muito utilizadas por RADIOAMADORES. Desta maneira eles conseguem se basear nos mapas e assim terem noção da situação de cada faixa, no momento da realização dos contatos.
 
