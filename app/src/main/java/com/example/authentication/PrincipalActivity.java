@@ -1,8 +1,13 @@
 package com.example.authentication;
 
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
+import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +22,8 @@ public class PrincipalActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
+
+        criarNotificacaoSimples();
 
         btnLogout = (Button) findViewById(R.id.btnLogout);
         btnLogout.setOnClickListener(new View.OnClickListener() {
@@ -92,6 +99,34 @@ public class PrincipalActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    public void criarNotificacaoSimples(){
+        int id = 1;
+        String titulo = "Login efetuado com sucesso!";
+        String texto = "Aplicativo para uso restrito de radioamadores.";
+        int icone = android.R.drawable.ic_dialog_alert;
+
+        Intent intent = new Intent(this, PrincipalActivity.class);
+        PendingIntent p = getPendingIntent(id, intent, this);
+
+        NotificationCompat.Builder notificacao = new NotificationCompat.Builder(this);
+        notificacao.setSmallIcon(icone);
+        notificacao.setContentTitle(titulo);
+        notificacao.setContentText(texto);
+        notificacao.setContentIntent(p);
+
+        NotificationManagerCompat nm = NotificationManagerCompat.from(this);
+        nm.notify(id, notificacao.build());
+    }
+
+    private PendingIntent getPendingIntent(int id, Intent intent, Context context){
+        TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);
+        stackBuilder.addParentStack(intent.getComponent());
+        stackBuilder.addNextIntent(intent);
+
+        PendingIntent p = stackBuilder.getPendingIntent(id, PendingIntent.FLAG_UPDATE_CURRENT);
+        return p;
     }
 
 }
